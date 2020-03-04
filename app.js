@@ -17,6 +17,22 @@ function signupUser() {
   const username = formData.get('username')
   const password = formData.get('password')
 
+  fetch(userURL, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password
+      })
+    })
+    .then(response => response.json())
+    .then(result => {
+      signupForm.reset()
+      localStorage.setItem('token', result.token)
+    })
 
 }
 
@@ -41,8 +57,29 @@ function loginUser() {
     })
     .then(response => response.json())
     .then(result => {
+      loginForm.reset()
       localStorage.setItem('token', result.token)
     })
+}
+//Check local storage for user token
+if (!localStorage.token) {
+  // alert('Something went wrong please try again')
+} else {
+  logoutButton()
+}
+
+function logoutButton() {
+  const button = document.createElement('button')
+
+  button.textContent = "logout"
+  button.addEventListener('click', logoutUser)
+
+  loginForm.appendChild(button)
+}
+
+function logoutUser() {
+  event.preventDefault()
+  localStorage.removeItem('token')
 }
 
 
