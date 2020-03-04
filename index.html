@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
+    <link rel="shortcut icon" href="/favicon (3).ico" type="image/x-icon">
     <title>Cycling</title>
 </head>
+
 <body>
-    <h1>Bike</h1> 
+    <div class="header">
+        <h1>Welcome to</h1>
+        <h2>my cycle biking </h2>
+        <p>Something motivational here</p>
+    </div>
+
+    <ul id="home-nav">
+        <li><a class="list" href="#check">Checklist</a></li>
+        <li><a class="my-ride" href="#home">My-Ride</a></li>
+        <li><a class="weather">Weather</a></li>
+        <li><a class="Find a ride">Post</a></li>
+    </ul>
+
+    <div class="card" id="Checklist" href="#list">
+        <h1>My Checklist</h1>
+        <p>Some text..</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat architecto quod voluptatum quis in debitis unde. Nisi, voluptates facere! Assumenda veritatis iusto corporis animi eum quod laudantium totam quaerat sed?</p>
+        <!-- <a href=".header" id="check">Back to top</a> -->
+    </div>
+
+    <div class="card">
+        <h1>My Ride</h1>
+        <h5>Title description</h5>
+        <p>Some text..</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat architecto quod voluptatum quis in debitis unde. Nisi, voluptates facere! Assumenda veritatis iusto corporis animi eum quod laudantium totam quaerat sed?</p>
+    </div>
+
+    <div class="card">
+        <h1 id="weather">Weather for Denver</h1>
+        <br>
+        <h2 id="its-currently">Its currently:</h2>
+        <br>
+        <h2 id="today">Today is going to be:</h2>
+    </div>
+
+    <div class="card">
+        <h1>Post</h1>
+        <ul id="post-container"></ul>
+        <form id="create-post">
+            <input type="text" name="title">
+            <input type="text" name="description">
+            <input type="submit" value="submit">
+        </form>
+    </div>
 </body>
+
 </html>
