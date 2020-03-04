@@ -175,6 +175,9 @@ body {
     font-family: 'Poppins', ;
     /* font-family: 'Montserrat', ; */
 }
+#main-page{
+    display: none;
+}
 .header {
     background-color: rgb(9, 255, 0);
     padding: 327px;
@@ -221,4 +224,8 @@ li a:hover {
   padding: 200px;
   margin-top: 20px;
   box-shadow: 10px 10px 5px grey;
+}
+#map {
+    width: 600px;
+    height: 400px;
 }
