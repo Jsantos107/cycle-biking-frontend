@@ -31,7 +31,7 @@ function signupUser() {
     .then(response => response.json())
     .then(result => {
       signupForm.reset()
-      localStorage.setItem('token', result.token)
+
     })
 
 }
@@ -59,6 +59,7 @@ function loginUser() {
     .then(result => {
       loginForm.reset()
       localStorage.setItem('token', result.token)
+      window.location.reload()
     })
 }
 
@@ -97,40 +98,58 @@ function deleteItem(items, item) {
   deleteButton.className = 'delete-button'
 }
 
-function main() {
-  //Check local storage for user token
-  // if (localStorage.token === "undefined" || !localStorage.token) {
-  //   console.log("nothing")
-  // } else {
-  //   console.log('hit')
-  //   mainPageLoad()
-  //   logoutButton()
-  // }
-  // function mainPageLoad() {
-  //   const mainPage = document.getElementById('main-page')
-  //   // window.location.reload()
-  //   mainPage.style.display = 'block'
-  // }
+const showSignup = document.getElementById('show-signup')
+const showLogin = document.getElementById('show-login')
+const login = document.getElementById('login')
+const signup = document.getElementById('sign-up')
+
+showSignup.addEventListener("click", () => {
+  event.preventDefault()
+  login.style.display = 'none'
+  signup.style.display = 'block'
+
+})
+showLogin.addEventListener("click", () => {
+  event.preventDefault()
+  signup.style.display = 'none'
+  login.style.display = 'block'
+
+})
+
+if (localStorage.token === "undefined" || !localStorage.token) {
+
+} else {
+  mainPageLoad()
+  logoutButton()
+  showLogin.style.display = 'none'
+  showSignup.style.display = 'none'
 }
 
-function logout() {
-  // function logoutButton() {
-  //   const button = document.createElement('button')
-
-  //   button.textContent = "logout"
-
-  //   button.addEventListener('click', logoutUser)
-
-  //   loginForm.appendChild(button)
-  // }
-
-  // function logoutUser() {
-  //   event.preventDefault()
-  //   localStorage.removeItem('token')
-  //   localStorage.removeItem('user')
-  //   localStorage.removeItem('userId')
-  // }
+function mainPageLoad() {
+  const mainPage = document.getElementById('main-page')
+  mainPage.style.display = 'block'
 }
+
+
+
+function logoutButton() {
+  const homeNav = document.getElementById('home-nav')
+  const button = document.createElement('button')
+
+  button.textContent = "logout"
+  button.className = 'logout-button'
+  button.addEventListener('click', logoutUser)
+
+  homeNav.appendChild(button)
+}
+
+function logoutUser() {
+  event.preventDefault()
+  localStorage.removeItem('token')
+  localStorage.removeItem('userId')
+  window.location.reload()
+}
+
 
 
 
@@ -182,73 +201,73 @@ function appendNewItem(result) {
 
 
 // // My route using Google Maps API
-//   function initMap() {
-//     var directionsService = new google.maps.DirectionsService();
-//     var directionsRenderer = new google.maps.DirectionsRenderer();
-//     var map = new google.maps.Map(document.getElementById('map'), {
-//       zoom: 7,
-//       center: {
-//         lat: 38.8267,
-//         lng: -105.7821
+// function initMap() {
+//   var directionsService = new google.maps.DirectionsService();
+//   var directionsRenderer = new google.maps.DirectionsRenderer();
+//   var map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 7,
+//     center: {
+//       lat: 38.8267,
+//       lng: -105.7821
+//     }
+//   });
+//   directionsRenderer.setMap(map);
+
+//   var onChangeHandler = function () {
+//     calculateAndDisplayRoute(directionsService, directionsRenderer);
+//   };
+//   document.getElementById('start').addEventListener('change', onChangeHandler);
+//   document.getElementById('end').addEventListener('change', onChangeHandler);
+// }
+
+// function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+//   directionsService.route({
+//       origin: {
+//         query: document.getElementById('start').value
+//       },
+//       destination: {
+//         query: document.getElementById('end').value
+//       },
+//       travelMode: 'BICYCLING'
+//     },
+//     function (response, status) {
+//       if (status === 'OK') {
+//         directionsRenderer.setDirections(response);
+//       } else {
+//         window.alert('Directions request failed due to ' + status);
 //       }
 //     });
-//     directionsRenderer.setMap(map);
-
-//     var onChangeHandler = function () {
-//       calculateAndDisplayRoute(directionsService, directionsRenderer);
-//     };
-//     document.getElementById('start').addEventListener('change', onChangeHandler);
-//     document.getElementById('end').addEventListener('change', onChangeHandler);
-//   }
-
-//   function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-//     directionsService.route({
-//         origin: {
-//           query: document.getElementById('start').value
-//         },
-//         destination: {
-//           query: document.getElementById('end').value
-//         },
-//         travelMode: 'BICYCLING'
-//       },
-//       function (response, status) {
-//         if (status === 'OK') {
-//           directionsRenderer.setDirections(response);
-//         } else {
-//           window.alert('Directions request failed due to ' + status);
-//         }
-//       });
-//   }
+// }
 
 
 // // Weather 
-//   const weatherURL = `https://api.darksky.net/forecast/4bb777ada8dd0c5341cacfbcfb6a9225/37.8267,-105.7821`
-//   const cors = `https://cors-anywhere.herokuapp.com`
+// const weatherURL = `https://api.darksky.net/forecast/4bb777ada8dd0c5341cacfbcfb6a9225/37.8267,-105.7821`
+// const cors = `https://cors-anywhere.herokuapp.com`
 
-//   fetch(`${cors}/${weatherURL}`)
-//       .then(response => response.json())
-//       .then(result => {
-//           currentWeather(result)
-//           todaysWeather(result)
-//       })
+// fetch(`${cors}/${weatherURL}`)
+//     .then(response => response.json())
+//     .then(result => {
+//         currentWeather(result)
+//         todaysWeather(result)
+//     })
 
-//   function currentWeather(result) {
-//       const itsCurrently = document.getElementById('its-currently')
-//       const current = document.createElement('h3')
+// function currentWeather(result) {
+//     const itsCurrently = document.getElementById('its-currently')
+//     const current = document.createElement('h3')
 
-//       current.textContent = result.currently.summary
+//     current.textContent = result.currently.summary
 
-//       itsCurrently.appendChild(current)
-//   }
+//     itsCurrently.appendChild(current)
+// }
 
-//   function todaysWeather(result) {
-//       const today = document.getElementById('today')
-//       const hourly = document.createElement('h2')
+// function todaysWeather(result) {
+//     const today = document.getElementById('today')
+//     const hourly = document.createElement('h2')
 
-//       hourly.textContent = result.hourly.summary
+//     hourly.textContent = result.hourly.summary
 
-//       today.appendChild(hourly)
-//   }
+//     today.appendChild(hourly)
+// }
 
 
 // Post
@@ -282,7 +301,6 @@ function userPost() {
   const formData = new FormData(postForm)
   const title = formData.get('title')
   const description = formData.get('description')
-  console.log(userId)
   fetch(postURL, {
       method: 'POST',
       headers: {
@@ -330,5 +348,34 @@ function deletePost(post, description) {
   })
   description.appendChild(deleteButton)
   deleteButton.className = 'delete-button'
+  editPost(post, description)
+}
+
+function editPost(post, description) {
+  const editPostForm = document.createElement('form')
+  editPostForm.className = 'edit-post-form'
+  editPostForm.innerHTML = `
+<lable for="post"> Edit description: </lable>
+<input type="test" id="${post.id}" class="edit-post-input" name="description" placeholder="Edit description"/>
+<button type="submit" class="edit-post-btn">Submit</button>
+`
+  editPostForm.addEventListener('submit', () => {
+    event.preventDefault()
+    const formData = new FormData(editPostForm)
+    const description = formData.get('description')
+    fetch(`${postURL}/${post.id}`, {
+        method: 'PATCH',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          description: description
+        })
+      })
+      .then(response => response)
+      .then(window.location.reload())
+  })
+  description.appendChild(editPostForm)
 
 }

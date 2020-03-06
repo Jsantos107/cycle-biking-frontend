@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <button id="show-signup">Sign-up</button>
     <div id="sign-up">
         <h1>Sign-up</h1>
         <form id="signup-form">
@@ -19,6 +20,7 @@
             <input type="submit" value="sign-up" id="signup-button">
         </form>
     </div>
+    <button id="show-login">Login</button>
     <div id="login">
         <h1>Login</h1>
         <form id="login-form">
@@ -36,13 +38,13 @@
         </div>
 
         <ul id="home-nav">
-            <li><a class="list" href="#check">Checklist</a></li>
-            <li><a class="my-ride" href="#home">My-Ride</a></li>
-            <li><a class="weather">Weather</a></li>
-            <li><a class="Find a ride">Post</a></li>
+            <li><a class="checklist" href="#check">Checklist</a></li>
+            <li><a class="my-ride" href="#ride">My-Ride</a></li>
+            <li><a class="weather" href="#news">Weather</a></li>
+            <li><a class="post" href="#social">Post</a></li>
         </ul>
 
-        <div class="card" id="Checklist" href="#list">
+        <div class="card" id="Checklist">
             <h1>My Checklist</h1>
             <br>
             <form id="create-item">
@@ -51,7 +53,7 @@
             </form>
             <br>
             <ul id="items"></ul>
-            <!-- <a href=".header" id="check">Back to top</a> -->
+            <a href="checklist" id="check" class="back-nav-btn">Back to top</a>
         </div>
 
         <div class="card" id="map-div">
@@ -63,6 +65,7 @@
             <b>End: </b>
             <input type="text" name="end" id="end" placeholder="End address">
             <div id="map"></div>
+            <a href="my-ride" id="ride" class="back-nav-btn">Back to top</a>
         </div>
 
         <div class="card">
@@ -71,6 +74,7 @@
             <h2 id="its-currently">Its currently:</h2>
             <br>
             <h2 id="today">Today is going to be:</h2>
+            <a href="weather" id="news" class="back-nav-btn">Back to top</a>
         </div>
 
         <div class="card">
@@ -86,10 +90,12 @@
                 <input type="text" name="description">
                 <input type="submit" value="submit" class="addBtn">
             </form>
+            <a href="post" id="social" class="back-nav-btn">Back to top</a>
         </div>
-    </main>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMfXFhE7DW1KkdD44LprXEFk5VnNO16Xo&callback=initMap"
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMfXFhE7DW1KkdD44LprXEFk5VnNO16Xo&callback=initMap"
         async defer></script> -->
+        <br>
+    </main>
 </body>
 
 </html>

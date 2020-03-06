@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 html,
 body,
 div,
@@ -165,17 +167,24 @@ select {
 
 /* begin css  */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 body {
-    background-image: linear-gradient(to bottom right, rgb(225, 240, 140), rgb(9, 255, 0));
+    background-color: rgb(9, 255, 0);
+    animation-name: body-amimation;
+    animation-duration: 7s;
     font-size: 28px;
     font-family: 'Montserrat';
 }
 
-/* #main-page {
-    display: none;
-} */
+@keyframes body-amimation{
+    from {
+    background-color: rgb(176, 226, 211);
+    }
+
+    to {
+        background-color: rgb(9, 255, 0);
+    }
+}
 
 #login-button {
     display: block;
@@ -199,17 +208,6 @@ body {
     cursor: pointer;
 }
 
-/* #logout-button {
-    display: block;
-    width: auto;
-    background-color: #333;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-} */
-
 #sign-up input {
     width: 50%;
     padding: 12px 20px;
@@ -228,16 +226,82 @@ body {
     box-sizing: border-box;
 }
 
-
-
-.header {
-    background-color: rgb(9, 255, 0);
-    padding: 327px;
-    text-align: center;
+#sign-up {
+    display: none;
 }
 
+#show-signup {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+#login {
+    display: none;
+
+}
+
+#show-login {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #333;
+}
+
+#main-page {
+    display: none;
+    background-color: #333;
+}
+
+.header {
+    background-image: linear-gradient(to bottom right, rgb(225, 240, 140), rgb(9, 255, 0));
+    /* background-color: rgb(9, 255, 0); */
+    padding: 327px;
+    text-align: center;
+    animation-name: header-amimation;
+    animation-duration: 7s;
+}
+@keyframes header-amimation{
+    from {
+    background-image: linear-gradient(to bottom right, rgb(215, 230, 134), rgb(74, 255, 67));
+
+    /* background-color: rgb(72, 255, 0); */
+    }
+
+    to {
+    background-image: linear-gradient(to bottom right, rgb(225, 240, 140), rgb(9, 255, 0));
+        /* background-color: rgb(9, 255, 0); */
+    }
+}
 .header h1 {
     font-size: 50px;
+}
+
+.logout-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 #home-nav {
@@ -249,6 +313,22 @@ body {
     top: 0;
 }
 
+.back-nav-btn {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.back-nav-btn:hover {
+    background-color: #000;
+    color: rgb(8, 253, 0);
+} 
 #items li {
     cursor: pointer;
     position: relative;
@@ -311,10 +391,12 @@ li a:hover {
 }
 
 .card {
-    /* background-color: white; */
+    background-image: linear-gradient(to bottom right, rgb(225, 240, 140), rgb(9, 255, 0));
     padding: 200px;
+    margin-right: 20px;
     margin-top: 20px;
-    box-shadow: 10px 10px 5px grey;
+    margin-left: 20px;
+    /* box-shadow: 10px 10px 5px grey; */
 }
 
 #map-div {
@@ -340,4 +422,28 @@ li a:hover {
 
 #post-container li:hover {
     background: #ddd;
+}
+
+.edit-post-btn {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.edit-post-btn:hover {
+    background-color: #49966f;
+}
+
+edit-post-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
