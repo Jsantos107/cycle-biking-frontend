@@ -166,35 +166,132 @@ select {
 /* begin css  */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 body {
-    /* background-color: rgb(184, 177, 177); */
     background-image: linear-gradient(to bottom right, rgb(225, 240, 140), rgb(9, 255, 0));
     font-size: 28px;
-    font-family: 'Poppins', ;
-    /* font-family: 'Montserrat', ; */
+    font-family: 'Montserrat';
 }
-#main-page{
+
+/* #main-page {
     display: none;
+} */
+
+#login-button {
+    display: block;
+    width: auto;
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
 }
+
+#signup-button {
+    display: block;
+    width: auto;
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* #logout-button {
+    display: block;
+    width: auto;
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+} */
+
+#sign-up input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#login input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+
 .header {
     background-color: rgb(9, 255, 0);
     padding: 327px;
     text-align: center;
-  }
-  .header h1 {
+}
+
+.header h1 {
     font-size: 50px;
-  }
-  
+}
+
 #home-nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    /* position: sticky; */
     top: 0;
+}
+
+#items li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    font-size: 18px;
+    transition: 0.2s;
+    border-radius: 20%;
+}
+
+#items li:hover {
+    background: #ddd;
+}
+
+.delete-button {
+    cursor: pointer;
+    background-color: blanchedalmond;
+    border: none;
+    margin: 4px 2px;
+}
+
+.delete-button:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.addBtn {
+    /* padding: 10px; */
+    border: none;
+    width: 25%;
+    background: #333;
+    color: rgb(255, 255, 255);
+    /* float: left; */
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 20%;
+}
+
+.addBtn:hover {
+    background-color: rgb(101, 163, 110);
+    color: #000;
 }
 
 li a {
@@ -213,19 +310,34 @@ li a:hover {
     background-color: #4CAF50;
 }
 
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+.card {
+    /* background-color: white; */
+    padding: 200px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 5px grey;
 }
 
-.card {
-  /* background-color: white; */
-  padding: 200px;
-  margin-top: 20px;
-  box-shadow: 10px 10px 5px grey;
+#map-div {
+    text-align: center;
+    position: relative;
+
 }
+
 #map {
     width: 600px;
     height: 400px;
+}
+
+#post-container li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    font-size: 18px;
+    transition: 0.2s;
+    border-radius: 20%;
+}
+
+#post-container li:hover {
+    background: #ddd;
 }

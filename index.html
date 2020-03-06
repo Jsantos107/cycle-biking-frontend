@@ -11,71 +11,85 @@
 </head>
 
 <body>
-    <form id="signup-form">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="sign-up">
-    </form>
-    <form id="login-form">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="login">
-    </form>
-    <!-- <main id="main-page"> -->
-    <div class="header">
-        <h1>Welcome to</h1>
-        <h2>my cycle biking </h2>
-        <p>Something motivational here</p>
-    </div>
-
-    <ul id="home-nav">
-        <li><a class="list" href="#check">Checklist</a></li>
-        <li><a class="my-ride" href="#home">My-Ride</a></li>
-        <li><a class="weather">Weather</a></li>
-        <li><a class="Find a ride">Post</a></li>
-    </ul>
-
-    <div class="card" id="Checklist" href="#list">
-        <h1>My Checklist</h1>
-        <p>Some text..</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat architecto quod voluptatum quis in
-            debitis
-            unde. Nisi, voluptates facere! Assumenda veritatis iusto corporis animi eum quod laudantium totam
-            quaerat
-            sed?</p>
-        <!-- <a href=".header" id="check">Back to top</a> -->
-    </div>
-
-    <div class="card">
-        <h1>My Ride</h1>
-        <b>Start: </b>
-        <input type="text" name="start" id="start" placeholder="Start address">
-        <b>End: </b>
-        <input type="text" name="end"  id="end" placeholder="End address">
-    </div>
-    <div id="map"></div>
-    </div>
-
-    <div class="card">
-        <h1 id="weather">Weather for Denver</h1>
-        <br>
-        <h2 id="its-currently">Its currently:</h2>
-        <br>
-        <h2 id="today">Today is going to be:</h2>
-    </div>
-
-    <div class="card">
-        <h1>Post</h1>
-        <ul id="post-container"></ul>
-        <form id="create-post">
-            <input type="text" name="title">
-            <input type="text" name="description">
-            <input type="submit" value="submit">
+    <div id="sign-up">
+        <h1>Sign-up</h1>
+        <form id="signup-form">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" value="sign-up" id="signup-button">
         </form>
     </div>
-    <!-- </main> -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMfXFhE7DW1KkdD44LprXEFk5VnNO16Xo&callback=initMap"
-        async defer></script>
+    <div id="login">
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" value="login" id="login-button">
+        </form>
+    </div>
+
+    <main id="main-page">
+        <div class="header">
+            <h1>Welcome to</h1>
+            <h2>my cycle biking </h2>
+            <p>Something motivational here</p>
+        </div>
+
+        <ul id="home-nav">
+            <li><a class="list" href="#check">Checklist</a></li>
+            <li><a class="my-ride" href="#home">My-Ride</a></li>
+            <li><a class="weather">Weather</a></li>
+            <li><a class="Find a ride">Post</a></li>
+        </ul>
+
+        <div class="card" id="Checklist" href="#list">
+            <h1>My Checklist</h1>
+            <br>
+            <form id="create-item">
+                <input type="text" name="item">
+                <input class="addBtn" type="submit" value="Add item">
+            </form>
+            <br>
+            <ul id="items"></ul>
+            <!-- <a href=".header" id="check">Back to top</a> -->
+        </div>
+
+        <div class="card" id="map-div">
+            <h1>My Ride</h1>
+            <br>
+            <b>Start: </b>
+            <input type="text" name="start" id="start" placeholder="Start address">
+            <br>
+            <b>End: </b>
+            <input type="text" name="end" id="end" placeholder="End address">
+            <div id="map"></div>
+        </div>
+
+        <div class="card">
+            <h1 id="weather">Weather for Denver</h1>
+            <br>
+            <h2 id="its-currently">Its currently:</h2>
+            <br>
+            <h2 id="today">Today is going to be:</h2>
+        </div>
+
+        <div class="card">
+            <h1>Post:</h1>
+            <br>
+            <ul id="post-container"></ul>
+            <br>
+            <h1>Create a Post:</h1>
+            <form id="create-post">
+                <p>Title:</p>
+                <input type="text" name="title">
+                <p>Description:</p>
+                <input type="text" name="description">
+                <input type="submit" value="submit" class="addBtn">
+            </form>
+        </div>
+    </main>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMfXFhE7DW1KkdD44LprXEFk5VnNO16Xo&callback=initMap"
+        async defer></script> -->
 </body>
 
 </html>
