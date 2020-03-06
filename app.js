@@ -78,7 +78,6 @@ fetch(userURL, {
 
 function appendItem(items) {
   const item = document.createElement('li')
-
   item.textContent = items.item
 
   itemContainer.appendChild(item)
@@ -201,73 +200,73 @@ function appendNewItem(result) {
 
 
 // // My route using Google Maps API
-// function initMap() {
-//   var directionsService = new google.maps.DirectionsService();
-//   var directionsRenderer = new google.maps.DirectionsRenderer();
-//   var map = new google.maps.Map(document.getElementById('map'), {
-//     zoom: 7,
-//     center: {
-//       lat: 38.8267,
-//       lng: -105.7821
-//     }
-//   });
-//   directionsRenderer.setMap(map);
+function initMap() {
+  var directionsService = new google.maps.DirectionsService();
+  var directionsRenderer = new google.maps.DirectionsRenderer();
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 7,
+    center: {
+      lat: 38.8267,
+      lng: -105.7821
+    }
+  });
+  directionsRenderer.setMap(map);
 
-//   var onChangeHandler = function () {
-//     calculateAndDisplayRoute(directionsService, directionsRenderer);
-//   };
-//   document.getElementById('start').addEventListener('change', onChangeHandler);
-//   document.getElementById('end').addEventListener('change', onChangeHandler);
-// }
+  var onChangeHandler = function () {
+    calculateAndDisplayRoute(directionsService, directionsRenderer);
+  };
+  document.getElementById('start').addEventListener('change', onChangeHandler);
+  document.getElementById('end').addEventListener('change', onChangeHandler);
+}
 
-// function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-//   directionsService.route({
-//       origin: {
-//         query: document.getElementById('start').value
-//       },
-//       destination: {
-//         query: document.getElementById('end').value
-//       },
-//       travelMode: 'BICYCLING'
-//     },
-//     function (response, status) {
-//       if (status === 'OK') {
-//         directionsRenderer.setDirections(response);
-//       } else {
-//         window.alert('Directions request failed due to ' + status);
-//       }
-//     });
-// }
+function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+  directionsService.route({
+      origin: {
+        query: document.getElementById('start').value
+      },
+      destination: {
+        query: document.getElementById('end').value
+      },
+      travelMode: 'BICYCLING'
+    },
+    function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
+}
 
 
 // // Weather 
-// const weatherURL = `https://api.darksky.net/forecast/4bb777ada8dd0c5341cacfbcfb6a9225/37.8267,-105.7821`
-// const cors = `https://cors-anywhere.herokuapp.com`
+const weatherURL = `https://api.darksky.net/forecast/[Your api key]/37.8267,-105.7821`
+const cors = `https://cors-anywhere.herokuapp.com`
 
-// fetch(`${cors}/${weatherURL}`)
-//     .then(response => response.json())
-//     .then(result => {
-//         currentWeather(result)
-//         todaysWeather(result)
-//     })
+fetch(`${cors}/${weatherURL}`)
+    .then(response => response.json())
+    .then(result => {
+        currentWeather(result)
+        todaysWeather(result)
+    })
 
-// function currentWeather(result) {
-//     const itsCurrently = document.getElementById('its-currently')
-//     const current = document.createElement('h3')
+function currentWeather(result) {
+    const itsCurrently = document.getElementById('its-currently')
+    const current = document.createElement('h3')
 
-//     current.textContent = result.currently.summary
+    current.textContent = result.currently.summary
 
-//     itsCurrently.appendChild(current)
-// }
+    itsCurrently.appendChild(current)
+}
 
-// function todaysWeather(result) {
-//     const today = document.getElementById('today')
-//     const hourly = document.createElement('h2')
+function todaysWeather(result) {
+    const today = document.getElementById('today')
+    const hourly = document.createElement('h2')
 
-//     hourly.textContent = result.hourly.summary
+    hourly.textContent = result.hourly.summary
 
-//     today.appendChild(hourly)
-// }
+    today.appendChild(hourly)
+}
 
 
 // Post
@@ -355,6 +354,7 @@ function editPost(post, description) {
   const editPostForm = document.createElement('form')
   editPostForm.className = 'edit-post-form'
   editPostForm.innerHTML = `
+  <br>
 <lable for="post"> Edit description: </lable>
 <input type="test" id="${post.id}" class="edit-post-input" name="description" placeholder="Edit description"/>
 <button type="submit" class="edit-post-btn">Submit</button>

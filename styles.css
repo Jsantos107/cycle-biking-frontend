@@ -294,7 +294,7 @@ body {
 .logout-button {
     background-color: #4CAF50;
     border: none;
-    color: white;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -302,6 +302,8 @@ body {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    margin-left: 47%;
+    position: absolute;
 }
 
 #home-nav {
@@ -329,6 +331,7 @@ body {
     background-color: #000;
     color: rgb(8, 253, 0);
 } 
+
 #items li {
     cursor: pointer;
     position: relative;
@@ -408,16 +411,16 @@ li a:hover {
 #map {
     width: 600px;
     height: 400px;
+    margin-left: 30%;
 }
 
 #post-container li {
-    cursor: pointer;
+    border: inset;
     position: relative;
     padding: 12px 8px 12px 40px;
     list-style-type: none;
-    font-size: 18px;
+    font-size: 20px;
     transition: 0.2s;
-    border-radius: 20%;
 }
 
 #post-container li:hover {
@@ -428,14 +431,15 @@ li a:hover {
     background-color: #333;
     border: none;
     color: white;
-    padding: 16px 32px;
+    /* padding: 16px 32px; */
     text-decoration: none;
-    margin: 4px 2px;
+    /* margin: 4px 2px; */
     cursor: pointer;
 }
 
 .edit-post-btn:hover {
-    background-color: #49966f;
+    background-color: #000;
+    color: greenyellow;
 }
 
 edit-post-input {
