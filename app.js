@@ -76,6 +76,7 @@ fetch(userURL, {
     localStorage.setItem('userId', result.user.id)
   })
 
+  
 function appendItem(items) {
   const item = document.createElement('li')
   item.textContent = items.item
@@ -240,7 +241,7 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
 
 
 // // Weather 
-const weatherURL = `https://api.darksky.net/forecast/[Your api key]/37.8267,-105.7821`
+const weatherURL = `https://api.darksky.net/forecast/4bb777ada8dd0c5341cacfbcfb6a9225/37.8267,-105.7821`
 const cors = `https://cors-anywhere.herokuapp.com`
 
 fetch(`${cors}/${weatherURL}`)

@@ -1,0 +1,23 @@
+{
+  "name": "bike-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jsantos107/cycle-biking-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jsantos107/cycle-biking-frontend/issues"
+  },
+  "homepage": "https://github.com/Jsantos107/cycle-biking-frontend#readme",
+  "dependencies": {
+    "cypress": "^4.1.0"
+  }
+}
