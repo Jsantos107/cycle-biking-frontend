@@ -31,20 +31,19 @@
     </div>
 
     <main id="main-page">
-        <header class="header" id="header">
-            <h1>Welcome to</h1>
-            <h2>my cycle biking </h2>
-            <p>Something motivational here</p>
-            
+        <header id="header">
+            <div class='title'>
+                <h1>Welcome to</h1>
+                <h2>my cycle biking </h2>
+                <p>Something motivational here</p>
+            </div>
+            <ul id="home-nav">
+                <li><a class="checklist" href="#checklist-div">Checklist</a></li>
+                <li><a class="my-ride" href="#map-div">My-Ride</a></li>
+                <li><a class="weather" href="#weather-div">Weather</a></li>
+                <li><a class="post" href="#post-div">Post</a></li>
+            </ul>
         </header>
-        <ul id="home-nav">
-            <li><a class="checklist" href="#checklist-div">Checklist</a></li>
-            <li><a class="my-ride" href="#map-div">My-Ride</a></li>
-            <li><a class="weather" href="#weather-div">Weather</a></li>
-            <li><a class="post" href="#post-div">Post</a></li>
-        </ul>
-        <br>
-        <br>
         <section class="card" id="checklist-div">
             <h1>My Checklist</h1>
             <br>
@@ -93,8 +92,9 @@
             </form>
             <a href="#header" class="back-nav-btn">Back to top</a>
         </section>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMfXFhE7DW1KkdD44LprXEFk5VnNO16Xo&callback=initMap"
-        async defer></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMfXFhE7DW1KkdD44LprXEFk5VnNO16Xo&callback=initMap"
+            async defer></script>
         <br>
     </main>
 </body>

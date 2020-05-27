@@ -272,27 +272,30 @@ body {
     background-color: #333;
 }
 
-.header {
-    background-image: linear-gradient(to bottom right, rgb(225, 240, 140), rgb(9, 255, 0));
-    padding: 327px;
+#header {
+    background-color: black;
+    color: #4CAF50;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
     text-align: center;
-    animation-name: header-amimation;
-    animation-duration: 7s;
 }
-@keyframes header-amimation{
-    from {
-    background-image: linear-gradient(to bottom right, rgb(215, 230, 134), rgb(74, 255, 67));
 
-    /* background-color: rgb(72, 255, 0); */
-    }
-
-    to {
-    background-image: linear-gradient(to bottom right, rgb(225, 240, 140), rgb(9, 255, 0));
-        /* background-color: rgb(9, 255, 0); */
-    }
-}
-.header h1 {
+.title h1 {
     font-size: 50px;
+    align-self: center;
+    align-items: center;
+
+}
+#home-nav{
+    display: flex;
+    flex-direction: row;
+    color:#4CAF50;
+}
+#home-nav :hover{
+    border-radius: 20px;
+    box-shadow: #4CAF50;
+    color: black;
 }
 
 .logout-button {
@@ -308,15 +311,6 @@ body {
     cursor: pointer;
     margin-left: 47%;
     position: absolute;
-}
-
-#home-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    top: 0;
 }
 
 .back-nav-btn {
