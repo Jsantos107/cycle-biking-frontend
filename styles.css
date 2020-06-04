@@ -203,81 +203,85 @@ body {
 }
 
 .back-nav-btn {
-    background-color: #333;
-    border: none;
+    background-color: black;
     color: white;
+    width: 50px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
-    margin-left: 90%;
     cursor: pointer;
+    float: right;
+    align-self: flex-end;
+    border-radius: 20px;
+    box-shadow: 0 0px 5px 0 #4CAF50;
 }
 
 .back-nav-btn:hover {
-    background-color: #000;
+    box-shadow: 0 0px 15px 0 #4CAF50;
     color: rgb(8, 253, 0);
 }
-
-#items li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    list-style-type: none;
-    font-size: 18px;
-    transition: 0.2s;
-    border-radius: 20%;
-}
-
-#items li:hover {
-    background: #ddd;
-}
-
-.delete-button {
-    cursor: pointer;
-    background-color: blanchedalmond;
-    border: none;
-    margin: 4px 2px;
-}
-
-.delete-button:hover {
-    background-color: #f44336;
-    color: white;
-}
-
-.addBtn {
-    /* padding: 10px; */
-    border: none;
-    width: 25%;
-    background: #333;
-    color: rgb(255, 255, 255);
-    /* float: left; */
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 20%;
-}
-
-.addBtn:hover {
-    background-color: rgb(101, 163, 110);
-    color: #000;
-}
-
-
-.active {
-    background-color: #4CAF50;
-}
-
 .card {
-    background-image: linear-gradient(to bottom right, rgb(225, 240, 140), rgb(9, 255, 0));
+    background-color: rgb(9, 255, 0);
     padding: 200px;
     margin-right: 20px;
     margin-top: 20px;
     margin-left: 20px;
     /* box-shadow: 10px 10px 5px grey; */
+}
+
+#checklist {
+    display: flex;
+    color: #4CAF50;
+    background-color: black;
+    flex-direction: column;
+}
+#items li {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    list-style-type: none;
+    font-size: 18px;
+    margin: 20px;
+    width: 50%;
+    border-radius: 20px;
+    color: #4CAF50;
+}
+
+#items li:hover {
+    box-shadow: 0 0px 5px 0 #4CAF50;
+}
+.input-item{
+    width: 40%;  
+}
+.delete-button {
+    cursor: pointer;
+    background-color: #f44336;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    float: right;
+}
+
+.delete-button:hover {
+    background-color: black;
+    color: #f44336;
+}
+
+.addBtn {
+    border: none;
+    width: 20%;
+    background: #4CAF50;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.addBtn:hover {
+    color: white;
+    box-shadow: 0 0px 15px 0 #4CAF50;
 }
 
 #map-div {
