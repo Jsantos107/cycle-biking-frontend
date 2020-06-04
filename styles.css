@@ -157,15 +157,15 @@ body {
     flex-direction: column;
     text-align: center;
 }
-
-.title {
-    color: #4CAF50;
+.cyclebiking-logo{
     align-self: center;
-    align-items: center;
-    
+    max-width: 200px;
+    margin: 15px;
+    border-radius: 100px;
 }
-.title h1{
-    font-size: 50px;
+.cyclebiking-logo:hover{
+    cursor: pointer;
+    box-shadow: 0 0px 15px 0 #4CAF50;
 }
 #home-nav{
     margin: 20px;
