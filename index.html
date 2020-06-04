@@ -36,13 +36,13 @@
             <nav id="home-nav">
                 <ul>
                     <li><a href="#checklist">Checklist</a></li>
-                    <li><a href="#map-div">My-Ride</a></li>
+                    <li><a href="#map-section">My-Ride</a></li>
                     <li><a href="#weather-div">Weather</a></li>
                     <li><a href="#post-div">Post</a></li>
                 </ul>
             </nav>
         </header>
-        <section class="card" id="checklist">
+        <section id="checklist">
             <h1>My Checklist</h1>
             <br>
             <form id="create-item">
@@ -54,14 +54,12 @@
             <a href="#header" class="back-nav-btn">Back to top</a>
         </section>
 
-        <section class="card" id="map-div">
+        <section class="card" id="map-section">
             <h1>My Ride</h1>
-            <br>
             <b>Start: </b>
-            <input type="text" name="start" id="start" placeholder="Start address">
-            <br>
+            <input type="text" class="input-ride" name="start" id="start" placeholder="Start address">
             <b>End: </b>
-            <input type="text" name="end" id="end" placeholder="End address">
+            <input type="text" class="input-ride"  name="end" id="end" placeholder="End address">
             <div id="map"></div>
             <a href="#header" class="back-nav-btn">Back to top</a>
         </section>

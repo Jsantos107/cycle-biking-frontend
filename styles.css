@@ -233,8 +233,11 @@ body {
 #checklist {
     display: flex;
     color: #4CAF50;
-    background-color: black;
     flex-direction: column;
+    padding: 50px;
+}
+#checklist h1{
+    text-align: center;
 }
 #items li {
     cursor: pointer;
@@ -252,7 +255,11 @@ body {
     box-shadow: 0 0px 5px 0 #4CAF50;
 }
 .input-item{
-    width: 40%;  
+    width: 70%;  
+}
+#create-item{
+    align-self: center;
+    width: 40%;
 }
 .delete-button {
     cursor: pointer;
@@ -283,17 +290,22 @@ body {
     color: white;
     box-shadow: 0 0px 15px 0 #4CAF50;
 }
-
-#map-div {
+#map-section h1{
     text-align: center;
-    position: relative;
-
 }
-
+#map-section {
+    display: flex;
+    flex-direction: column;
+    color: #4CAF50;
+    background-color: #000;
+}
+.input-ride{
+    width: 40%;
+}
 #map {
     width: 600px;
     height: 400px;
-    margin-left: 30%;
+    margin: 40px;
 }
 
 #post-container li {
