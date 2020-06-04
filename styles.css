@@ -1,169 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-    line-height: 1;
+	line-height: 1;
 }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+ol, ul {
+	list-style: none;
 }
-
-nav ul {
-    list-style: none;
+blockquote, q {
+	quotes: none;
 }
-
-blockquote,
-q {
-    quotes: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-a {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-
-ins {
-    background-color: #ff9;
-    color: #000;
-    text-decoration: none;
-}
-
-mark {
-    background-color: #ff9;
-    color: #000;
-    font-style: italic;
-    font-weight: bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
-}
-
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-
-/* change border colour to suit your needs */
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #cccccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-input,
-select {
-    vertical-align: middle;
-}
-
 
 /* begin css  */
 
@@ -176,9 +55,9 @@ body {
     font-family: 'Montserrat';
 }
 
-@keyframes body-amimation{
+@keyframes body-amimation {
     from {
-    background-color: rgb(176, 226, 211);
+        background-color: rgb(176, 226, 211);
     }
 
     to {
@@ -269,48 +148,58 @@ body {
 
 #main-page {
     display: none;
-    background-color: #333;
+    background-color: black;
 }
 
 #header {
     background-color: black;
-    color: #4CAF50;
     display: flex;
-    height: 500px;
     flex-direction: column;
     text-align: center;
 }
 
-.title h1 {
-    font-size: 50px;
+.title {
+    color: #4CAF50;
     align-self: center;
     align-items: center;
-
+    
+}
+.title h1{
+    font-size: 50px;
 }
 #home-nav{
-    display: flex;
-    flex-direction: row;
-    color:#4CAF50;
+    margin: 20px;
 }
-#home-nav :hover{
+#home-nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    padding: 15px 0px;
     border-radius: 20px;
-    box-shadow: #4CAF50;
+}
+
+#home-nav a:hover{
+    background-color: #4CAF50;
+    box-shadow: 0 0px 15px 0 #4CAF50;
     color: black;
 }
 
 .logout-button {
     background-color: #4CAF50;
     border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    padding: 20px 20px;
+    color: white;
+    width: 100px;
+    border-radius: 20px;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
-    margin-left: 47%;
-    position: absolute;
+    float: right;
+}
+
+.logout-button:hover {
+    box-shadow: 0 0px 15px 0 #4CAF50;
+    color: black;
 }
 
 .back-nav-btn {
@@ -326,10 +215,11 @@ body {
     margin-left: 90%;
     cursor: pointer;
 }
+
 .back-nav-btn:hover {
     background-color: #000;
     color: rgb(8, 253, 0);
-} 
+}
 
 #items li {
     cursor: pointer;
@@ -376,17 +266,6 @@ body {
     color: #000;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #4CAF50;
-}
 
 .active {
     background-color: #4CAF50;
