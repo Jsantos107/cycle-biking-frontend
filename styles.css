@@ -1,47 +1,134 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* begin css  */
@@ -157,19 +244,23 @@ body {
     flex-direction: column;
     text-align: center;
 }
-.cyclebiking-logo{
+
+.cyclebiking-logo {
     align-self: center;
     max-width: 200px;
     margin: 15px;
     border-radius: 100px;
 }
-.cyclebiking-logo:hover{
+
+.cyclebiking-logo:hover {
     cursor: pointer;
     box-shadow: 0 0px 15px 0 #4CAF50;
 }
-#home-nav{
+
+#home-nav {
     margin: 20px;
 }
+
 #home-nav a {
     display: inline-block;
     text-decoration: none;
@@ -179,7 +270,7 @@ body {
     border-radius: 20px;
 }
 
-#home-nav a:hover{
+#home-nav a:hover {
     background-color: #4CAF50;
     box-shadow: 0 0px 15px 0 #4CAF50;
     color: black;
@@ -221,6 +312,7 @@ body {
     box-shadow: 0 0px 15px 0 #4CAF50;
     color: rgb(8, 253, 0);
 }
+
 .card {
     background-color: rgb(9, 255, 0);
     padding: 200px;
@@ -236,9 +328,11 @@ body {
     flex-direction: column;
     padding: 50px;
 }
-#checklist h1{
+
+#checklist h1 {
     text-align: center;
 }
+
 #items li {
     cursor: pointer;
     text-align: center;
@@ -254,13 +348,16 @@ body {
 #items li:hover {
     box-shadow: 0 0px 5px 0 #4CAF50;
 }
-.input-item{
-    width: 70%;  
+
+.input-item {
+    width: 70%;
 }
-#create-item{
+
+#create-item {
     align-self: center;
     width: 40%;
 }
+
 .delete-button {
     cursor: pointer;
     background-color: #f44336;
@@ -290,22 +387,37 @@ body {
     color: white;
     box-shadow: 0 0px 15px 0 #4CAF50;
 }
-#map-section h1{
+
+#map-section h1 {
     text-align: center;
 }
+
 #map-section {
     display: flex;
     flex-direction: column;
     color: #4CAF50;
     background-color: #000;
 }
-.input-ride{
+
+.input-ride {
     width: 40%;
 }
+
 #map {
     width: 600px;
     height: 400px;
     margin: 40px;
+}
+
+#weather h1 {
+    text-align: center;
+}
+
+#weather {
+    display: flex;
+    color: #4CAF50;
+    flex-direction: column;
+    padding: 200px;
 }
 
 #post-container li {
