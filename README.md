@@ -10,7 +10,6 @@ create a bike route and explore the world.
 ## Technologies
 * JavaScript
 * Ruby on Rails - version 5.2.3
-* SQLite - version 3.24.0
 * Google maps API
 * Dark Sky API
 
