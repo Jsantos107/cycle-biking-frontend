@@ -135,102 +135,114 @@ table {
 
 
 body {
-    background-color: rgb(9, 255, 0);
-    animation-name: body-amimation;
-    animation-duration: 7s;
+    background-color: black;
     font-size: 28px;
     font-family: 'Montserrat';
 }
 
-@keyframes body-amimation {
-    from {
-        background-color: rgb(176, 226, 211);
-    }
+#welcome {
+    display: flex;
+    flex-direction: column;
+}
 
-    to {
-        background-color: rgb(9, 255, 0);
-    }
+#welcome-form-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
 }
 
 #login-button {
     display: block;
-    width: auto;
-    background-color: #333;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    background-color: #4CAF50;
+    color: black;
     border: none;
+    border-radius: 10px;
     cursor: pointer;
+}
+
+#login-button:hover {
+    box-shadow: 0 0px 15px 0 #4CAF50;
+    color: white;
 }
 
 #signup-button {
     display: block;
-    width: auto;
-    background-color: #333;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    background-color: #4CAF50;
+    color: black;
     border: none;
+    border-radius: 10px;
     cursor: pointer;
 }
 
+#signup-button:hover {
+    box-shadow: 0 0px 15px 0 #4CAF50;
+    color: white;
+}
+
 #sign-up input {
-    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
 }
 
 #login input {
-    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
 }
 
 #sign-up {
     display: none;
+    color: #4CAF50;
 }
 
 #show-signup {
-    background-color: #333;
+    background-color: #4CAF50;
     border: none;
-    color: white;
+    color: black;
     padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    left: 50%;
-    top: 25rem;
+    border-radius: 10px;
+    margin: 10px;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
-    position: relative;
+}
+
+#show-signup:hover {
+    box-shadow: 0 0px 15px 0 #4CAF50;
+    color: white;
 }
 
 #login {
     display: none;
-
+    color: #4CAF50;
 }
 
 #show-login {
-    background-color: #333;
+    background-color: #4CAF50;
     border: none;
-    color: white;
+    border-radius: 10px;
+    color: black;
     padding: 15px 32px;
+    margin: 10px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    left: 43%;
-    top: 25rem;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
-    position: absolute;
+}
+
+#show-login:hover {
+    box-shadow: 0 0px 15px 0 #4CAF50;
+    color: white;
 }
 
 #main-page {
@@ -444,8 +456,16 @@ body {
 
 #create-post {
     margin: 30px;
+    display: flex;
+    flex-direction: column;
 }
-
+#create-post input{
+    padding: 5px 20px;
+    width: 25%;
+    margin: 5px;
+    border: none;
+    border-radius: 4px
+}
 .edit-post-btn {
     background-color: #4CAF50;
     border: none;
@@ -461,4 +481,5 @@ body {
 
 .edit-post-input {
     border-radius: 4px;
+    border: none;
 }
