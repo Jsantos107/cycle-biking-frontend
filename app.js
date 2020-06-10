@@ -37,7 +37,6 @@ function signupUser() {
 }
 
 function loginUser() {
-
   event.preventDefault()
 
   const formData = new FormData(loginForm)
@@ -63,20 +62,6 @@ function loginUser() {
     })
 }
 
-
-fetch(userURL, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`
-    }
-  }).then(response => response.json())
-  .then(result => {
-    result.user.checklist_items.map(appendItem)
-    localStorage.setItem('userId', result.user.id)
-  })
-
-  
 function appendItem(items) {
   const item = document.createElement('li')
   item.textContent = items.item
@@ -128,6 +113,17 @@ if (localStorage.token === "undefined" || !localStorage.token) {
 function mainPageLoad() {
   const mainPage = document.getElementById('main-page')
   mainPage.style.display = 'block'
+  fetch(userURL, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`
+      }
+    }).then(response => response.json())
+    .then(result => {
+      result.user.checklist_items.map(appendItem)
+      localStorage.setItem('userId', result.user.id)
+    })
 }
 
 
@@ -150,21 +146,16 @@ function logoutUser() {
   window.location.reload()
 }
 
-
-
-
 // Checklist
 
 const checklistURL = "http://localhost:3000/checklist_items"
 const itemContainer = document.getElementById('items')
 const itemForm = document.getElementById('create-item')
 
-
 itemForm.addEventListener('submit', useritem)
 
 function useritem() {
   event.preventDefault()
-
   const formData = new FormData(itemForm)
   const item = formData.get('item')
 
@@ -188,9 +179,7 @@ function useritem() {
 
 function appendNewItem(result) {
   itemForm.reset()
-
   var ItemInfo = result.checklist_item
-
   const newItem = document.createElement('li')
 
   newItem.textContent = result.checklist_item.item
@@ -199,8 +188,8 @@ function appendNewItem(result) {
   deleteItem(ItemInfo, newItem)
 }
 
-
 // // My route using Google Maps API
+
 function initMap() {
   var directionsService = new google.maps.DirectionsService();
   var directionsRenderer = new google.maps.DirectionsRenderer();
@@ -245,30 +234,29 @@ const weatherURL = `https://api.darksky.net/forecast/4bb777ada8dd0c5341cacfbcfb6
 const cors = `https://cors-anywhere.herokuapp.com`
 
 fetch(`${cors}/${weatherURL}`)
-    .then(response => response.json())
-    .then(result => {
-        currentWeather(result)
-        todaysWeather(result)
-    })
+  .then(response => response.json())
+  .then(result => {
+    currentWeather(result)
+    todaysWeather(result)
+  })
 
 function currentWeather(result) {
-    const itsCurrently = document.getElementById('its-currently')
-    const current = document.createElement('h3')
+  const itsCurrently = document.getElementById('its-currently')
+  const current = document.createElement('h3')
 
-    current.textContent = result.currently.summary
+  current.textContent = result.currently.summary
 
-    itsCurrently.appendChild(current)
+  itsCurrently.appendChild(current)
 }
 
 function todaysWeather(result) {
-    const today = document.getElementById('today')
-    const hourly = document.createElement('h2')
+  const today = document.getElementById('today')
+  const hourly = document.createElement('h2')
 
-    hourly.textContent = result.hourly.summary
+  hourly.textContent = result.hourly.summary
 
-    today.appendChild(hourly)
+  today.appendChild(hourly)
 }
-
 
 // Post
 
